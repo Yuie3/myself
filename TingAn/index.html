@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Demo</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+  <style>
+    .project-card {
+      width: 18rem;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .animated-title {
+      animation: pulse 20s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .text-primary {
+      color: #000000 !important;
+    }
+
+    .btn-back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: none;
+      color: #ffffff;
+      text-align: center;
+      font-size: 20px;
+      line-height: 50px;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .btn-back-to-top:hover {
+      opacity: 1;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4 animated-title">安安的個人網頁</h1>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <p class="lead">＼(´◓Д◔`)／</p>
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 fs-4">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">關於我</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nuu">教育背景</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">技能與證照</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ex">經驗與實習</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">製作專案</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#prize">獲獎與榮譽</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#photo">活動照片</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#me">文章</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">聯絡我</a>
+          </li>
+        </ul>
+      </nav>
+      <hr class="my-4" />
+    </div>
+    <a href="#" class="btn btn-primary btn-back-to-top fs-1"> 🖕 </a>
+    <script>
+      // 滾動事件監聽器
+      window.addEventListener("scroll", function () {
+        var btnBackToTop = document.querySelector(".btn-back-to-top");
+        if (window.pageYOffset > 200) {
+          btnBackToTop.style.display = "block";
+        } else {
+          btnBackToTop.style.display = "none";
+        }
+      });
+    </script>
+
+    <section id="about" style="background-color: #94f3eb; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/me.jpg" alt="個人圖片" class="img-fluid rounded-circle" />
+          </div>
+          <div class="col-md-8">
+            <h2 class="text-primary fs-1">關於我</h2>
+            <p class="fs-5">
+              <br />
+              HI 我是周庭安<br />
+              目前就讀於國立聯合大學店 資訊管理學系 <br />
+              昨天剛滿20歲<br />
+              興趣是睡覺與作夢<br />
+              目標是能夠準時畢業QQ
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+    <section id="nuu" style="background-color: #6177f5; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="text-primary fs-1">教育背景</h2>
+            <br />
+            <ul class="fs-5">
+              <li>國小:後埔國小</li>
+              <li>國中:重慶國中</li>
+              <li>高中:新北高工-資訊科</li>
+              <li>大學:聯合大學-資訊管理學系(就讀中)</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <br />
+            <img src="images/nuu.png" alt="個人圖片" class="img-fluid reference" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+    <section id="skills" style="background-color: #ff6464; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 style="color: rgb(255, 255, 255)">技能與證照</h2>
+            <div>
+              <ul class="fs-5">
+                <li>Labview</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>php</li>
+                <li>Piano</li>
+                <li>Arduino</li>
+                <li>Java</li>
+                <li>數位電子乙級</li>
+                <li>工業電子丙級</li>
+                <li>網路架設丙級</li>
+                <li>電腦軟體設計丙級</li>
+                <li>電腦硬體裝修丙級</li>
+                <li>演奏等級檢定合格證 9級</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <br /><br />
+            <img src="images/Certificate.png" alt="個人圖片" class="img-fluid reference" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+
+    <section id="ex" style="background-color: #94f3a1; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/nuu2.png" alt="個人圖片" class="img-fluid rounded" />
+          </div>
+          <div class="col-md-8">
+            <h2 class="text-primary fs-1">經驗與實習</h2>
+            <p class="fs-4">偏向課輔系統代班</p>
+            <p class="fs-5">
+              大二的時候被系上的老師騙進去，在裡面幫助大小學伴解決系統設備相關問題，雖然事情很多、薪水很少，但還是很感謝老師當初給我這個機會，在裡面也認識到了很多學長姐，開拓了我的社交圈。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+
+    <section id="me" style="background-color: #ecbb7a; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/books-2022464_1280.bak.png" alt="個人圖片" class="img-fluid rounded" />
+          </div>
+          <div class="col-md-8">
+            <h2 class="text-primary fs-1">文章</h2>
+            <p class="fs-3">關於自己</p>
+            <p class="fs-5">
+              從入學到現在，其實最多的還是感嘆自己能力的不足，與唾棄自己為何如此頹廢，在資管系中，我學到了許多東西，但也容易陷入擺爛的狀態，希望在未來能夠讓自己更加自律與努力，變得更好。
+            </p>
+            <p class="fs-3">見解</p>
+            <p class="fs-5">
+              對於自己或資管系的獨到見解，我認為要跟上AI的潮流，必須要強迫自己一直學習新東西，才不會被時代拋下。
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+
+    <section id="projects" style="background-color: #b194f3; border-radius: 10px; padding: 20px">
+      <h2 style="color: rgb(255, 255, 255)">製作專案</h2>
+      <div class="card-deck">
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/bookshelf.jpg" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">圖書館書架智慧化</h5>
+              <p class="card-text">
+                透過 Arduino、RFID 與滑軌的結合，實現書架智慧化<br /><br />
+              </p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project1-modal">more</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/154152344_1646444585562655_3388037642821490252_n.jpg" class="card-img-top" alt="專案圖片" />
+
+            <div class="card-body">
+              <h5 class="card-title">智慧自動電扶梯消毒器</h5>
+              <p class="card-text">
+                透過遠端遙控實現了定時自動消毒電扶梯扶手的器具，可以減少人力與感染風險
+              </p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project2-modal">more</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/1.jpg" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">50屆技藝競賽</h5>
+              <p class="card-text">
+                50屆技藝競賽 區賽 機器人作品<br /><br /><br />
+              </p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project3-modal">more</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/python.png" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">側翼判斷器</h5>
+              <p class="card-text">
+                現今的網路上充滿著險性的與隱性的政黨側翼，透過此系統可以判斷此粉磚的政治傾向
+              </p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project4-modal">more</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/Reversi.png" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">黑白棋</h5>
+              <p class="card-text">大一上期末專題 黑白棋實做<br /><br /></p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project5-modal">more</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/Arkanoid.png" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">打磚塊</h5>
+              <p class="card-text">大一下BCB實作 打磚塊遊戲<br /><br /></p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project6-modal">more</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/unknown.png" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">夾娃娃機</h5>
+              <p class="card-text">大一下期末專題 夾娃娃機實作<br /><br /></p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project7-modal">more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card bg-info text-white">
+            <img src="images/case3.png" class="card-img-top" alt="專案圖片" />
+            <div class="card-body">
+              <h5 class="card-title">工程建案管理系統</h5>
+              <p class="card-text">
+                大二下資料庫程式設計期末專題<br /><br />
+              </p>
+              <a href="#" class="btn btn-light" data-toggle="modal" data-target="#project8-modal">more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="project1-modal" tabindex="-1" role="dialog" aria-labelledby="project1-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1-modal-label">
+              圖書館書架智慧化
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              從小開始就熱愛閱讀的我們 , 圖書館 , 幾乎可以算是我們的另外一
+              個家 , 泡在裏頭的時間數不勝數 , 而在 10 年的啃書生涯中 ,
+              每當我們歡 歡喜喜地準備找尋下一本讀物時 , 卻常常遇到一種情況 ,
+              不僅僅在校內 或校外的圖書館 , 當我們使用圖書館的官網查詢館藏 ,
+              確認書並沒有被 外借後 , 根據索書號來到對應的書架 ,
+              卻發現書不在書架上 , 甚至不在 附近的書架上 ,
+              最後在完全不同類型的書架上找到 , 而更多的時候是找 不到 。 很明顯
+              , 有很多讀者將自己看完的書本隨手亂放 , 而我們常常為
+              這件事感到困擾 經由網路上查尋之後 ,
+              我們發現現在大部分的智慧圖書館 , 並沒有
+              裝置針對書架的感測器與能夠解決書本錯位亂放的問題 , 所以我們希望
+              使用 Arduino 開發出一種智慧書架 , 從而改善館內書本錯位的情況 。
+              為了解決這種 「 書本錯位 」 的 問題而發想製作 「 書本錯位警告器
+              」 專題 。
+              <br /><br />
+              本專題就是針對 「 圖書館架 上書本錯位 」 的狀況 ,
+              設計了一種能夠自動感測的書架 , 使用感應裝置 與品片作成的偵測器 ,
+              再利用自走齒軌搭載感應裝置 『 RFID-RC522 」 來 回偵測 ,
+              逐一對書本上的品片進行 UID 比對 , 達到 「 當書本被放置到錯
+              誤書架上時 , LED 燈光警示便會常亮 」 的效果 ,
+              希望能藉此來提醒讀者 或館員書本錯位的情況 ,
+              能隨時把書本放在正確位置 , 提高閱覽書籍找 書的便利性。
+              <img src="images/123.jpg" class="card-img-top" alt="書架圖片" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="project2-modal" tabindex="-1" role="dialog" aria-labelledby="project2-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project2-modal-label">
+              智慧自動電扶梯消毒器
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              2019 年底 , 新型冠狀肺炎 COVID -19 席捲整個世界 , 目前總 共感染
+              1.3 億的人民 , 帶走了 250 萬的生命 , 多個國家遭受到重大 損害 ,
+              可以說是世界級的危機 , 但是 , 當多數國家生活機能停擺 ,
+              人們面帶愁容時 , 卻有一個異類 , 不但沒有讓社會運作停滯 , 還能
+              反過來救助其他國家 , 創造了一個防疫奇蹟 , 是的 , 就是台灣 。
+              台灣的防疫成績有目共睹 , 領導團隊在疫情爆發前的預防 , 爆
+              發後的嚴格追蹤 、 口罩控管的實施 , 各大廠所的精密消毒等等 , 都
+              是這奇蹟的一部份 ; 身為學生的我們 , 也想著能夠為這次的危機出
+              一分力 , 在每天搭乘捷運通勤的過程中 , 我們發現了一個防疫的缺 陷
+              , 便是 「 緊握扶手 , 站穩踏階 」 幾乎每個乘客都會碰到的電扶梯
+              扶手 , 整個捷運站裡最多人觸碰的地方 , 原本的消毒措施是由清潔
+              人員定期用抹布消毒 , 不僅費時費力 , 還容易造成人群推擠 , 發現
+              了這個問題的我們 , 便想利用此事專題的機會 , 結合本科的能力 ,
+              為社會解決這個問題。<br />
+              疫情爆發後 , 人人都開始盡量避免接觸 , 但例如車上的拉環 、
+              電梯裡的按鈕 , 卻都無法避免 , 大眾運輸中 , 光是台北捷運 , 一個
+              月就有著 200 萬的載客流量 , 是一個非常龐大的人流 , 透過間接接
+              觸進行傳染途徑的機率越來越大 , 而幾乎每個人進出站都會碰到的
+              電扶梯扶手 , 只需要一小段時間 , 便能在扶手上累積無數的細菌病 毒
+              , 縱使肉眼無法看到 , 但其實它們已經隨著人流而散布到各處
+              這次我們想著手的點在於捷運和火車站中的電扶悌扶手 , 利用 水位計
+              、 ESP32 、 Arduino 等部件結合 , 製成本次的專題 「 具物聯
+              網功能之電扶梯扶手消毒機 」 只要設定好時間 , 便可以自動化 ,
+              定時定點的為人來人往的電扶梯進行消毒 , 盡可能減少清潔人員壓力
+              以及與行人的過多接觸 , 避免遮擋行人動線造成阻塞推擠或是清潔
+              人員與行人過多接觸而可能導致的疾病散播等風險 。
+              <img src="images/4564.jpg" class="card-img-top" alt="專案圖片" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="project3-modal" tabindex="-1" role="dialog" aria-labelledby="project3-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project3-modal-label">
+              50屆技藝競賽
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              高中時候參與了機器人技藝競賽的培訓，雖然最後只拿到了區賽佳作，但是是一次難得寶貴的經驗學習到了許多的技術，也鍛鍊了我的抗壓能力
+            </p>
+            <img src="images/105.jpg" class="card-img-top" alt="專案圖片" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="project4-modal" tabindex="-1" role="dialog" aria-labelledby="project4-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project4-modal-label">側翼判斷器</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              現在的台灣充斥著各個政黨的水軍側翼炒作等等亂象，為
+              了令大家好判斷粉絲專業的政治傾向，故寫此側翼粉專判斷 器。
+              內容說明:
+              首先找尋幾個已經被確定抱出來的FB側翼粉專藍綠政黨共四位，我找的分別為國民黨:「藍色力量」與「反蔡英文粉絲團」，民進黨:「只是堵藍」與「謝立聖插畫」，經由爬蟲爬出他
+              們粉絲專業內的文章，並標註1 or 2
+              的標籤，經由羅吉斯回歸判斷器去訓練模型，
+              最後讓使用者將自己有疑慮的粉專內文貼上判斷，即可判斷政治傾向。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="project5-modal" tabindex="-1" role="dialog" aria-labelledby="project1-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1-modal-label">黑白棋</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              黑白棋（英語：Reversi），又稱翻轉棋、蘋果棋或奧賽羅棋（Othello），是一種雙人對弈的棋類遊戲。
+              這是大一時程式設計課的期末專題，在那時候算是新的高難度挑戰，藉由此專題第一次認識到「遞迴」。
+              <img src="images/Reversi2.png" class="card-img-top" alt="書架圖片" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="project6-modal" tabindex="-1" role="dialog" aria-labelledby="project1-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1-modal-label">打磚塊遊戲</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              大一下的期中作業，以BCB開發環境為基礎，是我寫的很艱難的一份作業，但我也學到了兩個物件之間的碰撞判定，有需多之前沒想到的小細節。
+              與類別中呼叫其他類別的方式。
+              <img src="images/Arkanoid2.png" class="card-img-top" alt="書架圖片" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="project7-modal" tabindex="-1" role="dialog" aria-labelledby="project1-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1-modal-label">
+              夾娃娃機遊戲
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              大一下程式設計課程的期末專題，製作了一個基於BCB環境的2D夾娃娃機。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="project8-modal" tabindex="-1" role="dialog" aria-labelledby="project1-modal-label"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="project1-modal-label">
+              工程建案管理系統
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              工程建案管理系統專案旨在滿足施工廠商 、 負責人與業
+              主間的交流保障 , 我們設計此系統 , 讓使用者可以查詢
+              工程廠商過往資訊 、 負責人資訊等等 , 並且可以對目前
+              委託的建案在日誌中進行交流 , 時時查看進度 。
+              <img src="images/case.png" class="card-img-top" alt="書架圖片" />
+              <img src="images/case2.png" class="card-img-top" alt="書架圖片" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
+
+    <section id="prize" style="background-color: #bdc0b9; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 style="color: rgb(0, 0, 0)">獲獎與榮譽</h2>
+            <ul class="fs-5">
+              <li>第50屆全國技能競賽 機器人職種 北區分區賽 佳作</li>
+              <li>
+                參加108學年度合作盃國語文暨母語競賽 國語朗讀(二、三)年級組
+                第一名
+              </li>
+              <li>1090315梯次 全國高級中等學校閱讀心得比賽 佳作</li>
+              <li>1100315梯次 工程技術類小論文 甲等</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="images/medal.png" alt="圖片" class="img-fluid reference" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br /><br /><br />
+
+    <section id="photo" style="background-color: #f3a294; border-radius: 10px; padding: 20px">
+      <h2 style="color: rgb(0, 0, 0)">活動照片</h2>
+      <div class="d-flex justify-content-between">
+        <div class="card-deck">
+          <div class="project-card">
+            <div class="card bg-info text-white">
+              <div class="card-body">
+                <h5 class="card-title fs-5" style="color: black;">台中班遊</h5>
+                <button class="btn btn-light btn-lg" data-toggle="collapse" data-target="#photo-gallery1"
+                  aria-expanded="false" aria-controls="photo-gallery1"
+                  onclick="collapseAllExcept('photo-gallery1')">查看相片</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-deck">
+          <div class="project-card">
+            <div class="card bg-info text-white">
+              <div class="card-body">
+                <h5 class="card-title fs-5" style="color: black;">偏鄉課輔</h5>
+                <button class="btn btn-light btn-lg" data-toggle="collapse" data-target="#photo-gallery2"
+                  aria-expanded="false" aria-controls="photo-gallery2"
+                  onclick="collapseAllExcept('photo-gallery2')">查看相片</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-deck">
+          <div class="project-card">
+            <div class="card bg-info text-white">
+              <div class="card-body">
+                <h5 class="card-title fs-5" style="color: black;">企業參訪</h5>
+                <button class="btn btn-light btn-lg" data-toggle="collapse" data-target="#photo-gallery3"
+                  aria-expanded="false" aria-controls="photo-gallery3"
+                  onclick="collapseAllExcept('photo-gallery3')">查看相片</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="photo-gallery1">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/LINE_ALBUM_日月老茶廠_230618.jpg" alt="照片 1" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <img src="images/LINE_ALBUM_漆彈-1_230618.jpg" alt="照片 2" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <img src="images/LINE_ALBUM_202242_230618.jpg" alt="照片 3" class="img-fluid">
+          </div>
+          <!-- 在這裡繼續增加需要的照片項目 -->
+        </div>
+      </div>
+
+      <div class="collapse" id="photo-gallery2">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/FB_IMG_1687098941048.jpg" alt="照片 4" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <img src="images/FB_IMG_1687098956756.jpg" alt="照片 5" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <img src="images/FB_IMG_1687099072763.jpg" alt="照片 6" class="img-fluid">
+          </div>
+          <!-- 在這裡繼續增加需要的照片項目 -->
+        </div>
+      </div>
+
+      <div class="collapse" id="photo-gallery3">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/LINE_ALBUM_參訪_230618.jpg" alt="照片 4" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <img src="images/LINE_ALBUM_2022129_2306318.jpg" alt="照片 5" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <img src="images/LINE_ALBUM_2022129_230618.jpg" alt="照片 6" class="img-fluid">
+          </div>
+          <!-- 在這裡繼續增加需要的照片項目 -->
+        </div>
+      </div>
+    </section>
+
+
+    <script>
+      function collapseAllExcept(targetId) {
+        var targets = document.querySelectorAll('[data-toggle="collapse"]');
+        for (var i = 0; i < targets.length; i++) {
+          var target = targets[i];
+          var targetData = target.getAttribute('data-target');
+          if (targetData !== targetId) {
+            $(targetData).collapse('hide');
+          }
+        }
+      }
+    </script>
+
+
+    <br /><br /><br />
+    <section id="contact" style="background-color: #f394e3; border-radius: 10px; padding: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 style="color: rgb(8, 8, 8)">有事想找我?</h2>
+            <br />
+            <ul class="fs-5">
+              <li>Email：[U1033125@o365.nuu.edu.tw]</li>
+              <li>電話：[0968930679]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+  </div>
+</body>
+
+</html>
